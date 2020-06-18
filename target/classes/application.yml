@@ -1,0 +1,35 @@
+#默认使用配置
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+
+
+jdbc:
+  driver: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/test
+  username: root
+  password:
+
+
+#mybatis
+mybatis:
+  config_file: mybatis-config.xml
+  #mybatis mapper.xml文件里，使用别名，如：类型为com.demo.entiy.User 可以直接写成 User
+  typeAliasesPackage: com.demo.entity
+  mapperLocations: classpath:mappers/*.xml
+
+
+
+
+
+#mapper_path: classpath:mappers/*.xml
+
